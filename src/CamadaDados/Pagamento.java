@@ -5,10 +5,11 @@ import CamadaApresentacao.CadastroVeiculo;
 public class Pagamento {
     private double desconto;
     private double encargo;
-    private float valorBruto = new CadastroVeiculo.getvalorveiculo();
+    CadastroVeiculo cadVeiculo = new CadastroVeiculo();
+    private float valorBruto;
 
     public Pagamento(float valorBruto, double desconto, double encargo) {
-        this.valorBruto = valorBruto;
+        this.valorBruto = cadVeiculo.getvalorveiculo();
         this.desconto = desconto;
         this.encargo = encargo;
     }
