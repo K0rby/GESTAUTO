@@ -1,11 +1,11 @@
 package CamadaDados;
 public class Veiculo {
-    String modelo;
-    String cor;
-    int valor;
-    String status; 
+    private String modelo;
+    private String cor;
+    private float valor;
+    private String status;
 
-    public Veiculo(String modelo, String cor, int valor, String status){
+    public Veiculo(String modelo, String cor, float valor, String status){
         this.modelo = modelo;
         this.cor = cor;
         this.valor = valor;
@@ -28,7 +28,7 @@ public class Veiculo {
         this.cor = cor;
     }
 
-    public int getValor() {
+    public float getValor() {
         return valor;
     }
 
