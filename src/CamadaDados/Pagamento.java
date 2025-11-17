@@ -15,5 +15,17 @@ public class Pagamento {
     }
 
 
+    public float getValorBruto() {
+        return valorBruto;
+    }
+
+    public double getDesconto() {
+        return desconto;
+    }
+
+    public double getEncargo() {
+        return encargo;
+    }
+
 
 }
