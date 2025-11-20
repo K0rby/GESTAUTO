@@ -1,4 +1,9 @@
 package CamadaDados;
+
+import CamadaNegocios.ControleComissaoVendedores;
+import CamadaNegocios.GeracaoFolhaPagamento;
+
+
 public class Funcionario {
     private String nome;
     private String cpf;

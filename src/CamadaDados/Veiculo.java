@@ -1,4 +1,9 @@
 package CamadaDados;
+
+import CamadaNegocios.ControleVeiculos;
+import CamadaNegocios.ControledeVendas;
+
+
 public class Veiculo {
     private String modelo;
     private String cor;
