@@ -1,6 +1,7 @@
 package CamadaDados;
 
 
+import java.util.Scanner;
 
 public class Funcionario {
     private String nome;
@@ -19,6 +20,29 @@ public class Funcionario {
 
     public Funcionario() {
     }
+
+    public Funcionario preencher(){
+        Scanner dado = new Scanner(System.in);
+
+        System.out.println("Informe o nome do funcionario:");
+        this.nome = dado.nextLine();
+
+        System.out.println("Informe o CPF do funcionario:");
+        this.cpf = dado.nextLine();
+
+        System.out.println("Informe o telefone do funcionario:");
+        this.telefone = dado.nextLine();
+
+        System.out.println("Informe o cargo do funcionario:");
+        this.cargo = dado.nextLine();
+
+        System.out.println("Informe o salario do funcionario:");
+        this.salario = dado.nextFloat();
+        return new Funcionario(nome, cpf, telefone, cargo, salario);
+
+    }
+
+
 
     public String getNome() {
         return nome;

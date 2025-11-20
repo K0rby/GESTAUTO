@@ -1,7 +1,7 @@
 package CamadaDados;
 
 
-
+import java.util.Scanner;
 
 public class Veiculo {
     private String modelo;
@@ -14,6 +14,27 @@ public class Veiculo {
         this.cor = cor;
         this.valor = valor;
         this.status = status;
+    }
+
+    public Veiculo() {
+    }
+
+    public Veiculo preencher(){
+        Scanner dado = new Scanner(System.in);
+
+        System.out.println("Informe o modelo do veículo:");
+        this.modelo = dado.nextLine();
+
+        System.out.println("Informe a cor do veículo:");
+        this.cor = dado.nextLine();
+
+        System.out.println("Informe o valor do veículo:");
+        this.valor = dado.nextFloat();
+
+        System.out.println("Informe o status do veículo:");
+        this.status = dado.next();
+
+        return new Veiculo(modelo, cor, valor, status);
     }
 
     public String getModelo() {
@@ -46,5 +67,15 @@ public class Veiculo {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "modelo='" + modelo + '\'' +
+                ", cor='" + cor + '\'' +
+                ", valor=" + valor +
+                ", status='" + status + '\'' +
+                '}';
     }
 }

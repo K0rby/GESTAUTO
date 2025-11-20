@@ -13,11 +13,8 @@ public class FuncionarioDAO {
 //    Funcionario fun = CadastroFuncionarios
 
     public void insert (CamadaDados.Funcionario func) {
+
         System.out.println("Cadastrou o funcionário.");
-
-
-
-
     }
 
 }

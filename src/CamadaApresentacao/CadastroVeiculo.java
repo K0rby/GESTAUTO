@@ -10,12 +10,17 @@ public class CadastroVeiculo {
 
   private ControllerVeiculo veiculoController;
 
-  public CadastroVeiculo(String modeloVeiculo, String corVeiculo, float valorVeiculo, String statusVeiculo) {
-      this.veiculoController = new ControllerVeiculo(new Veiculo(modeloVeiculo, corVeiculo, valorVeiculo, statusVeiculo));
-  }
+//  public CadastroVeiculo(String modeloVeiculo, String corVeiculo, float valorVeiculo, String statusVeiculo) {
+//      this.veiculoController = new ControllerVeiculo(new Veiculo(modeloVeiculo, corVeiculo, valorVeiculo, statusVeiculo));
+//  }
 
-  public void cadVeic(){
-      veiculoController.cadastraVeiculo();
+    public CadastroVeiculo() {
+        this.veiculoController = new ControllerVeiculo(new Veiculo());
+    }
+
+
+    public void cadVeic(){
+        veiculoController.cadastraVeiculo();
   }
 
 

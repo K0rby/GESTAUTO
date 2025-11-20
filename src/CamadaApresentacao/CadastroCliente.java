@@ -10,8 +10,10 @@ public class CadastroCliente {
 
     private ControllerCliente clienteController;
 
-    public CadastroCliente(String nomeCliente, String cpfCliente, String telefoneCliente) {
-        this.clienteController = new ControllerCliente(new Cliente(nomeCliente, cpfCliente, telefoneCliente));
+//
+
+    public CadastroCliente() {
+        this.clienteController = new ControllerCliente(new Cliente());
     }
 
     public void cadCli(){
