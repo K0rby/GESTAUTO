@@ -1,6 +1,6 @@
 package CamadaDados;
 
-import CamadaNegocios.ControledeVendas;
+
 
 
 public class Cliente {

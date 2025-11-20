@@ -1,7 +1,5 @@
 package CamadaDados;
 
-import CamadaNegocios.ControleComissaoVendedores;
-import CamadaNegocios.GeracaoFolhaPagamento;
 
 
 public class Funcionario {
@@ -17,6 +15,9 @@ public class Funcionario {
         this.telefone = telefone;
         this.cargo = cargo;
         this.salario = salario;
+    }
+
+    public Funcionario() {
     }
 
     public String getNome() {
@@ -59,4 +60,15 @@ public class Funcionario {
         this.salario = salario;
     }
 
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", cargo='" + cargo + '\'' +
+                ", salario=" + salario +
+                '}';
+    }
 }

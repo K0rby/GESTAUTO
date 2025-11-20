@@ -1,30 +1,22 @@
 package CamadaApresentacao;
 
 import CamadaDados.Veiculo;
+import CamadaNegocios.Controller.ControllerVeiculo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CadastroVeiculo {
 
-    private List<Veiculo> veiculos = new ArrayList<Veiculo>();
+  private ControllerVeiculo veiculoController;
 
+  public CadastroVeiculo(String modeloVeiculo, String corVeiculo, float valorVeiculo, String statusVeiculo) {
+      this.veiculoController = new ControllerVeiculo(new Veiculo(modeloVeiculo, corVeiculo, valorVeiculo, statusVeiculo));
+  }
 
-    public void adicionarVeiculo(Veiculo veiculo) {
-        veiculos.add(veiculo);
-    }
-
-    public List<Veiculo> getVeiculos() {
-        return veiculos;
-    }
-
-    public void removerVeiculo(Veiculo veiculo) {
-        veiculos.remove(veiculo);
-    }
-
-    public float getvalorveiculo(){
-        return veiculos.get(0).getValor();
-    }
+  public void cadVeic(){
+      veiculoController.cadastraVeiculo();
+  }
 
 
 

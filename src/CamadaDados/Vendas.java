@@ -1,7 +1,6 @@
 package CamadaDados;
 
-import CamadaNegocios.ControledeVendas;
-import CamadaNegocios.ControleComissaoVendedores;
+
 
 import java.time.LocalDate;
 
