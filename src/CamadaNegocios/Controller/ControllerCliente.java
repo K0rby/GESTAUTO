@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ControllerCliente {
+public class    ControllerCliente {
 
     private Cliente cliente;
     private CamadaNegocios.DAO.ClienteDAO dao;
