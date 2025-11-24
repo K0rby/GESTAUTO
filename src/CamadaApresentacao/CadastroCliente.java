@@ -20,4 +20,8 @@ public class CadastroCliente {
         clienteController.cadastraCliente();
     }
 
+    public void imprimirClientes(){
+        clienteController.imprimirTodos();
+    }
+
 }

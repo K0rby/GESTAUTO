@@ -23,6 +23,10 @@ public class CadastroVeiculo {
         veiculoController.cadastraVeiculo();
   }
 
+  public void imprimirVeiculos(){
+      veiculoController.imprimirTodos();
+  }
+
 
 
 

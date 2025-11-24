@@ -6,39 +6,40 @@ import CamadaApresentacao.CadastroVeiculo;
 
 public class PagamentoFuncionario {
     private double desconto;
-    private double encargo;
     private double bonus;
-    private float valorBruto;
+    private double valorLiquido;
 
-    public PagamentoFuncionario(float valorBruto, double desconto, double encargo, double bonus) {
+    public PagamentoFuncionario(double valorLiquido, double desconto, double bonus) {
+        this.valorLiquido = valorLiquido;
         this.desconto = desconto;
-        this.encargo = encargo;
         this.bonus = bonus;
+
     }
 
     public void setDesconto(double desconto) {
         this.desconto = desconto;
     }
 
-    public void setEncargo(double encargo) {
-        this.encargo = encargo;
-    }
 
     public void setValorBruto(float valorBruto) {
-        this.valorBruto = valorBruto;
+        this.valorLiquido = valorBruto;
     }
 
-    public float getValorBruto() {
-        return valorBruto;
+    public double getValorLiquido() {
+        return valorLiquido;
     }
 
     public double getDesconto() {
         return desconto;
     }
 
-    public double getEncargo() {
-        return encargo;
+
+    @Override
+    public String toString() {
+        return "PagamentoFuncionario{" +
+                "desconto=" + desconto +
+                ", bonus=" + bonus +
+                ", valorLiquido=" + valorLiquido +
+                '}';
     }
-
-
 }

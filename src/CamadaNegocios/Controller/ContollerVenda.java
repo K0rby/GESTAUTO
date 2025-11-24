@@ -44,7 +44,7 @@ public class ContollerVenda {
 
         while(c == 1){
 
-            System.out.println("Iniciando cadastro de venda...");
+            System.out.println("Iniciando cadastro de venda:");
 
             System.out.println("Infome o cpf do cliente: ");
             String cpfCliente = dado.next();
@@ -80,7 +80,7 @@ public class ContollerVenda {
             c = dado.nextInt();
         }
 
-        imprimirVendas();
+
     }
 
     public void imprimirVendas() {

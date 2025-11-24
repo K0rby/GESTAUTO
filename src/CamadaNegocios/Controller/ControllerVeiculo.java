@@ -33,7 +33,7 @@ public class ControllerVeiculo {
             c = dado.nextInt();
         }
 
-        imprimirTodos();
+
     }
 
     public void imprimirTodos() {

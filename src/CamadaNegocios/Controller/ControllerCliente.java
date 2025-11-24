@@ -36,7 +36,7 @@ public class    ControllerCliente {
             c = dado.nextInt();
         }
 
-        imprimirTodos();
+
     }
 
     public void imprimirTodos() {

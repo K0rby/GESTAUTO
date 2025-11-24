@@ -24,4 +24,8 @@ public class CadastroFuncionarios {
     public void cadFunc(){
         funcinarioController.cadastraFuncionario();
     }
+
+    public void imprimirFuncionarios(){
+        funcinarioController.imprimirTodos();
+    }
 }
