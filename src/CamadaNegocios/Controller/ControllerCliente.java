@@ -7,36 +7,23 @@ import com.sun.source.tree.WhileLoopTree;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
+import CamadaNegocios.DAO.*;
 
 public class    ControllerCliente {
 
     private Cliente cliente;
-    private CamadaNegocios.DAO.ClienteDAO dao;
+    private ClienteDAO dao;
     LinkedList<Cliente> listaClientes = new LinkedList<>();
 
-    public ControllerCliente (Cliente cliente) {
-        this.cliente = cliente;
-        this.dao = new CamadaNegocios.DAO.ClienteDAO();
+    public ControllerCliente () {
+        this.dao = new ClienteDAO();
     }
 
-    public void cadastraCliente() {
-        Scanner dado = new Scanner(System.in);
-        int c = 1;
-
-        while(c == 1){
-
-            cliente = new Cliente().preencher();
-
+    public void cadastraCliente(Cliente cliente) {
             System.out.println(cliente);
             dao.insert(cliente);
 
             listaClientes.add(cliente);
-
-            System.out.println("Deseja cadastrar outro cliente? (1 - Sim / 0 - Não)");
-            c = dado.nextInt();
-        }
-
-
     }
 
     public void imprimirTodos() {

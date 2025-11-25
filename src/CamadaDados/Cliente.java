@@ -29,25 +29,6 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente preencher(){
-        Scanner dado = new java.util.Scanner(System.in);
-
-        System.out.println("Informe o nome do cliente:");
-        this.nome = dado.nextLine();
-
-
-        System.out.println("Informe o CPF do cliente:");
-        this.cpf = dado.nextLine();
-
-
-        System.out.println("Informe o telefone do cliente:");
-        this.telefone = dado.nextLine();
-
-
-        return new Cliente(nome, cpf, telefone);
-    }
-
-
     public String getNome() {
         return nome;
     }

@@ -30,7 +30,11 @@ public class Main {
             while (d == 1){
                 System.out.println("\n<=================== Gest Auto ===================>\n");
                 System.out.println("Bem vindo ao sistema da concesionária, escolha uma das opções abaixo para continuar a operação:");
-                System.out.println("Digite: \n1 - para cadastro; \n2 - para gerar relatórios; \n0 - para sair:");
+                System.out.println("Digite: " +
+                        "\n1 - para cadastro; " +
+                        "\n2 - para gerar relatórios; " +
+                        "\n0 - para sair:");
+
                 d = dado.nextInt();
                 if (d == 1){
 
@@ -122,10 +126,6 @@ public class Main {
             }
 
             }
-
-
-
-
 
     }
 }
