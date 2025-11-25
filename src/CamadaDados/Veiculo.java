@@ -21,26 +21,7 @@ public class Veiculo {
     public Veiculo() {
     }
 
-    public Veiculo preencher(){
-        Scanner dado = new Scanner(System.in);
 
-        System.out.println("Informe o modelo do veículo:");
-        this.modelo = dado.nextLine();
-
-        System.out.println("Informe a cor do veículo:");
-        this.cor = dado.nextLine();
-
-        System.out.println("Informe o valor do veículo:");
-        this.valor = dado.nextDouble();
-
-        System.out.println("Informe a placa do veículo");
-        this.placa = dado.next();
-
-        System.out.println("Informe o status do veículo:");
-        this.status = dado.next();
-
-        return new Veiculo(modelo, cor, valor, placa, status);
-    }
 
     public String getModelo() {
         return modelo;

@@ -46,7 +46,7 @@ public class CadastroCliente {
     }
 
     public Cliente preencher(){
-        Scanner dado = new java.util.Scanner(System.in);
+        Scanner dado = new Scanner(System.in);
 
         System.out.println("Informe o nome do cliente:");
         String nome = dado.nextLine();
