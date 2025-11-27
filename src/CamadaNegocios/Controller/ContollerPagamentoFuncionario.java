@@ -69,9 +69,8 @@ public class ContollerPagamentoFuncionario {
 
     }
 
-
     public void imprimirPagamentosTodos() {
-        var lista = PagamentoFuncionarioDAO.getListaPagamentos();
+        var lista = daoPagamentoFuncionario.getListaPagamentos();
         if (lista == null || lista.isEmpty()) {
             System.out.println("Nenhum pagamento cadastrado.");
             return;

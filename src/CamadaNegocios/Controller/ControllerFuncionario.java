@@ -30,7 +30,7 @@ public class ControllerFuncionario {
             return;
         }
         System.out.println("Lista de funcionários cadastrados:");
-        for (CamadaDados.Funcionario f : listaFuncionarios) {
+        for (Funcionario f : listaFuncionarios) {
             System.out.println(f);
         }
     }

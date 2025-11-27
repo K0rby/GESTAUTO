@@ -1,14 +1,17 @@
 package CamadaNegocios.DAO;
 
 import CamadaDados.PagamentoVeiculo;
+import CamadaNegocios.DAO.InterfaceDao.InterfacePagamentoVeiculo;
+import CamadaNegocios.DAO.InterfaceDao.InterfaceVeiculoDAO;
 
 import java.util.ArrayList;
 
-public class PagamentoVeiculoDAO {
+public class PagamentoVeiculoDAO implements InterfacePagamentoVeiculo {
 
     private static final ArrayList<PagamentoVeiculo> listaPagamentos = new ArrayList<>();
 
-    public void insert (CamadaDados.PagamentoVeiculo pag) {
+    @Override
+    public void insert (PagamentoVeiculo pag) {
 
         if (pag != null) {
             listaPagamentos.add(pag);
@@ -17,7 +20,8 @@ public class PagamentoVeiculoDAO {
 
     }
 
-    public static ArrayList<PagamentoVeiculo> getListaPagamentos() {
+    @Override
+    public ArrayList<PagamentoVeiculo> getListaPagamentos() {
         return listaPagamentos;
     }
 

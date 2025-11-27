@@ -3,23 +3,23 @@ package CamadaNegocios.DAO;
 
 import CamadaApresentacao.CadastroFuncionarios;
 import CamadaDados.Funcionario;
+import CamadaNegocios.DAO.InterfaceDao.InterfaceFuncionarioDAO;
 
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Scanner;
 
-public class FuncionarioDAO {
+public class FuncionarioDAO implements InterfaceFuncionarioDAO {
 
     private static final ArrayList<Funcionario> listaFuncionarios = new ArrayList<>();
 
 
-    public void insert (CamadaDados.Funcionario func) {
+    @Override
+    public void insert (Funcionario func) {
         if (func != null) {
             listaFuncionarios.add(func);
             System.out.println("Cadastrou o funcionário.");
         }
-
-
     }
 
     public ArrayList<Funcionario> getListaFuncionarios() {

@@ -1,26 +1,28 @@
 package CamadaNegocios.DAO;
 
 import CamadaDados.Cliente;
+import CamadaNegocios.DAO.InterfaceDao.InterfaceClienteDAO;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class ClienteDAO {
+public class ClienteDAO implements InterfaceClienteDAO {
 
-    private static final List<Cliente> listaClientes = new ArrayList<>();
+    private static final ArrayList<Cliente> listaClientes = new ArrayList<>();
 
-    public void insert (CamadaDados.Cliente cli) {
+    @Override
+    public void insert(Cliente cli) {
         if (cli != null) {
             listaClientes.add(cli);
+            System.out.println("Cadastrou o cliente.");
         }
-
-        System.out.println("Cadastrou o cliente.");
     }
 
-    public List<Cliente> getListaClientes() {
-        return Collections.unmodifiableList(listaClientes);
+    @Override
+    public ArrayList<Cliente> getListaClientes() {
+        return listaClientes;
     }
 
     public Optional<Cliente> findByCpf(String cpf) {

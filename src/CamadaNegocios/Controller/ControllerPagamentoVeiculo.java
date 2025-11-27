@@ -1,5 +1,6 @@
 package CamadaNegocios.Controller;
 
+import CamadaDados.PagamentoVeiculo;
 import CamadaDados.Veiculo;
 import CamadaNegocios.DAO.PagamentoVeiculoDAO;
 import CamadaNegocios.DAO.VeiculoDAO;
@@ -58,12 +59,12 @@ public class ControllerPagamentoVeiculo {
 
     }
     public void imprimirTodos () {
-        if (CamadaNegocios.DAO.PagamentoVeiculoDAO.getListaPagamentos().isEmpty()) {
+        if (daoPagamentoVeiculo.getListaPagamentos().isEmpty()) {
             System.out.println("Nenhum pagamento de veículo cadastrado.");
             return;
         }
         System.out.println("Lista de pagamentos de veículos cadastrados:");
-        for (CamadaDados.PagamentoVeiculo p : CamadaNegocios.DAO.PagamentoVeiculoDAO.getListaPagamentos()) {
+        for (PagamentoVeiculo p : daoPagamentoVeiculo.getListaPagamentos()) {
             System.out.println(p);
         }
     }
