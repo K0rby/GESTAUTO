@@ -1,15 +1,21 @@
 package CamadaNegocios.DAO;
 
 
-import CamadaApresentacao.CadastroFuncionarios;
 import CamadaDados.Funcionario;
 import CamadaNegocios.DAO.InterfaceDao.InterfaceFuncionarioDAO;
 
 import java.util.ArrayList;
 import java.util.Optional;
-import java.util.Scanner;
 
 public class FuncionarioDAO implements InterfaceFuncionarioDAO {
+    private static FuncionarioDAO instance;
+    private FuncionarioDAO() {}
+     public static FuncionarioDAO getInstance() {
+        if (instance == null) {
+            instance = new FuncionarioDAO();
+        }
+        return instance;
+    }
 
     private static final ArrayList<Funcionario> listaFuncionarios = new ArrayList<>();
 
@@ -22,10 +28,12 @@ public class FuncionarioDAO implements InterfaceFuncionarioDAO {
         }
     }
 
+    @Override
     public ArrayList<Funcionario> getListaFuncionarios() {
         return listaFuncionarios;
     }
 
+    @Override
     public Optional<Funcionario> findByCpf(String cpf) {
         return listaFuncionarios.stream()
                 .filter(f -> f.getCpf() != null && f.getCpf().equals(cpf))

@@ -1,7 +1,6 @@
 package CamadaNegocios.DAO.InterfaceDao;
 
 import CamadaDados.PagamentoFuncionario;
-import CamadaDados.PagamentoVeiculo;
 
 import java.util.ArrayList;
 

@@ -4,16 +4,14 @@ import CamadaDados.Veiculo;
 import CamadaNegocios.DAO.VeiculoDAO;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class ControllerVeiculo {
 
-    private Veiculo veiculo;
-    private CamadaNegocios.DAO.VeiculoDAO dao;
+    private final CamadaNegocios.DAO.VeiculoDAO dao;
     LinkedList<Veiculo> listaVeiculos = new LinkedList<>();
 
     public ControllerVeiculo () {
-        this.dao = new VeiculoDAO();
+        this.dao = VeiculoDAO.getInstance();
     }
 
     public void cadastraVeiculo(Veiculo veiculo) {

@@ -11,13 +11,13 @@ import java.util.Scanner;
 public class ControllerPagamentoVeiculo {
 
     private Veiculo veiculo;
-    private PagamentoVeiculoDAO daoPagamentoVeiculo;
-    private VeiculoDAO daoVeiculo = new VeiculoDAO();
+    private final PagamentoVeiculoDAO daoPagamentoVeiculo;
+    private VeiculoDAO daoVeiculo = VeiculoDAO.getInstance();
 
     public ControllerPagamentoVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
-        this.daoPagamentoVeiculo = new PagamentoVeiculoDAO();
-        this.daoVeiculo = new VeiculoDAO();
+        this.daoPagamentoVeiculo = PagamentoVeiculoDAO.getInstance();
+        this.daoVeiculo = VeiculoDAO.getInstance();
     }
 
     public void cadastrarPagamentoVeiculo() {

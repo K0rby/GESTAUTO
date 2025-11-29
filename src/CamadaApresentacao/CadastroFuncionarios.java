@@ -2,10 +2,6 @@ package CamadaApresentacao;
 
 import CamadaDados.Funcionario;
 import CamadaNegocios.Controller.ControllerFuncionario;
-import CamadaNegocios.DAO.FuncionarioDAO;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class CadastroFuncionarios {

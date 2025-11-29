@@ -18,24 +18,23 @@ public class ContollerVenda {
     private Veiculo veiculo;
     private Cliente cliente;
     private Funcionario funcionario;
-    private VendasDAO dao;
-    private Vendas vendas;
+    private final VendasDAO dao;
 
-    private VeiculoDAO daoVeiculo;
-    private ClienteDAO daoCliente;
-    private FuncionarioDAO daoFuncionario;
-    private VendasDAO daoVendas;
+    private final VeiculoDAO daoVeiculo;
+    private final ClienteDAO daoCliente;
+    private final FuncionarioDAO daoFuncionario;
+    private final VendasDAO daoVendas;
 
     public ContollerVenda(Veiculo veiculo, Cliente cliente, Funcionario funcionario) {
         this.veiculo = veiculo;
         this.cliente = cliente;
         this.funcionario = funcionario;
-        this.dao = new VendasDAO();
+        this.dao = VendasDAO.getInstance();
 
-        this.daoVeiculo = new VeiculoDAO();
-        this.daoCliente = new ClienteDAO();
-        this.daoFuncionario = new FuncionarioDAO();
-        this.daoVendas = new VendasDAO();
+        this.daoVeiculo = VeiculoDAO.getInstance();
+        this.daoCliente = ClienteDAO.getInstance();
+        this.daoFuncionario = FuncionarioDAO.getInstance();
+        this.daoVendas = VendasDAO.getInstance();
     }
 
     public void cadastraVenda(){

@@ -3,8 +3,6 @@ package CamadaApresentacao;
 import CamadaDados.Veiculo;
 import CamadaNegocios.Controller.ControllerVeiculo;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class CadastroVeiculo {

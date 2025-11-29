@@ -1,6 +1,5 @@
 package CamadaNegocios.Controller;
 
-import CamadaApresentacao.CadastroFuncionarios;
 import CamadaDados.Funcionario;
 import CamadaDados.PagamentoFuncionario;
 import CamadaNegocios.DAO.FuncionarioDAO;
@@ -12,13 +11,13 @@ import java.util.Scanner;
 public class ContollerPagamentoFuncionario {
 
     private Funcionario funcionario;
-    private PagamentoFuncionarioDAO daoPagamentoFuncionario;
-    private FuncionarioDAO daoFuncionario = new FuncionarioDAO();
+    private final PagamentoFuncionarioDAO daoPagamentoFuncionario;
+    private FuncionarioDAO daoFuncionario =  FuncionarioDAO.getInstance();
 
     public ContollerPagamentoFuncionario (Funcionario funcionario) {
         this.funcionario = funcionario;
-        this.daoPagamentoFuncionario = new PagamentoFuncionarioDAO();
-        this.daoFuncionario = new FuncionarioDAO();
+        this.daoPagamentoFuncionario = PagamentoFuncionarioDAO.getInstance();
+        this.daoFuncionario =  FuncionarioDAO.getInstance();
     }
 
 

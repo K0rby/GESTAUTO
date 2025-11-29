@@ -1,13 +1,20 @@
 package CamadaNegocios.DAO;
 
 import CamadaDados.PagamentoFuncionario;
-import CamadaNegocios.DAO.InterfaceDao.InterfaceFuncionarioDAO;
 import CamadaNegocios.DAO.InterfaceDao.InterfacePagamentoFuncionario;
 
 import java.util.ArrayList;
 
 public class PagamentoFuncionarioDAO implements InterfacePagamentoFuncionario {
 
+    private static PagamentoFuncionarioDAO instance;
+    private PagamentoFuncionarioDAO(){}
+    public static PagamentoFuncionarioDAO getInstance(){
+         if (instance == null) {
+            instance = new PagamentoFuncionarioDAO();
+        }
+        return instance;
+    }
     private static final ArrayList<PagamentoFuncionario> listaPagamentos = new ArrayList<>();
 
     @Override

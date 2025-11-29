@@ -4,16 +4,14 @@ import CamadaDados.Funcionario;
 import CamadaNegocios.DAO.FuncionarioDAO;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class ControllerFuncionario {
 
-    private Funcionario funcionario;
-    private FuncionarioDAO dao;
+    private final FuncionarioDAO dao;
     LinkedList<Funcionario> listaFuncionarios = new LinkedList<>();
 
     public ControllerFuncionario () {
-        this.dao = new FuncionarioDAO();
+        this.dao = FuncionarioDAO.getInstance();
     }
 
     public void cadastraFuncionario(Funcionario funcionario) {

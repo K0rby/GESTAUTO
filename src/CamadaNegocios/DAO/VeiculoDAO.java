@@ -10,6 +10,15 @@ public class VeiculoDAO implements InterfaceVeiculoDAO {
 
     private static final ArrayList<Veiculo> listaVeiculos = new java.util.ArrayList<>();
 
+    private static VeiculoDAO instance;
+    private VeiculoDAO(){}
+    public static VeiculoDAO getInstance(){
+         if (instance == null) {
+            instance = new VeiculoDAO();
+        }
+        return instance;
+    }
+
     @Override
     public void insert (Veiculo vei) {
         if (vei != null) {

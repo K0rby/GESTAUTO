@@ -6,7 +6,15 @@ import java.util.ArrayList;
 
 public class VendasDAO {
 
-    private static final ArrayList<Vendas> listaVendas = new ArrayList<Vendas>();
+    private static final ArrayList<Vendas> listaVendas = new ArrayList<>();
+    private static VendasDAO instance;
+    private VendasDAO(){}
+    public static VendasDAO getInstance(){
+         if (instance == null) {
+            instance = new VendasDAO();
+        }
+        return instance;
+    }
 
     public void insert (CamadaDados.Vendas ven) {
         if (ven != null) {
